@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bqpsl4oxswlbi"]
+
+[ext_resource type="Texture2D" uid="uid://6odo4if270oh" path="res://misc assets/GloveBox.png" id="1_g2tbl"]
+[ext_resource type="Script" uid="uid://ivfxqegn33uu" path="res://box.gd" id="1_oq5cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_128xk"]
+size = Vector2(87, 85)
+
+[node name="Box" type="Area2D" unique_id=1860058456]
+script = ExtResource("1_oq5cr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=703714225]
+position = Vector2(33.5, -32.5)
+shape = SubResource("RectangleShape2D_128xk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1122810561]
+position = Vector2(33.499996, -51)
+scale = Vector2(2.4218748, 2.28125)
+texture = ExtResource("1_g2tbl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
