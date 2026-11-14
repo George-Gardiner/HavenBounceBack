@@ -2,8 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cn1vk2bpqjajd" path="res://player.tscn" id="1_3hls8"]
 [ext_resource type="Texture2D" uid="uid://bn3fvkmtw4vte" path="res://misc assets/background.png" id="1_ihfcg"]
+[ext_resource type="Texture2D" uid="uid://bmwxpu8l8yk40" path="res://misc assets/Blocks.png" id="2_5hph3"]
 [ext_resource type="Texture2D" uid="uid://idifm7gntf0" path="res://misc assets/ball.png" id="2_rka8t"]
 [ext_resource type="PackedScene" uid="uid://bfuf5l7g5eioj" path="res://bouncy_block.tscn" id="3_hn12h"]
+[ext_resource type="Texture2D" uid="uid://br7lpoyi3hlye" path="res://misc assets/BLoxz.png" id="4_j7kpp"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_128xk"]
 distance = 83.0
@@ -21,6 +23,11 @@ texture = ExtResource("1_ihfcg")
 [node name="Toys" type="Parallax2D" parent="." unique_id=351511555]
 scroll_scale = Vector2(0.7, 0.7)
 
+[node name="Blocks" type="Sprite2D" parent="Toys" unique_id=672381701]
+position = Vector2(-1044.9023, 151.92497)
+scale = Vector2(6.875, 4.625)
+texture = ExtResource("2_5hph3")
+
 [node name="Ball2" type="Sprite2D" parent="Toys" unique_id=1086394044]
 position = Vector2(539, -37)
 scale = Vector2(9.4921875, 9.007813)
@@ -30,6 +37,12 @@ texture = ExtResource("2_rka8t")
 position = Vector2(-1486, 45.999985)
 scale = Vector2(5.7421856, 5.703125)
 texture = ExtResource("2_rka8t")
+
+[node name="BLoxz" type="Sprite2D" parent="Toys" unique_id=499947975]
+position = Vector2(-1175.9023, 86.925)
+rotation = -0.7452556
+scale = Vector2(6.875, 4.625)
+texture = ExtResource("4_j7kpp")
 
 [node name="Front" type="Parallax2D" parent="." unique_id=352448541]
 
@@ -44,3 +57,8 @@ shape = SubResource("WorldBoundaryShape2D_128xk")
 
 [node name="BouncyBlock" parent="Front" unique_id=240428882 instance=ExtResource("3_hn12h")]
 position = Vector2(45, 85)
+
+[node name="Blocks" type="Sprite2D" parent="." unique_id=1101605408]
+position = Vector2(1169, 171)
+scale = Vector2(8.453125, 7.203125)
+texture = ExtResource("2_5hph3")
