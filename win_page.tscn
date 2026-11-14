@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://j4i5pd0ot3n0"]
 
+[ext_resource type="Script" uid="uid://ofn7l4iagwb7" path="res://win_page.gd" id="1_g818r"]
+[ext_resource type="Texture2D" uid="uid://dsmg5n86alif1" path="res://misc assets/title screen.png" id="2_awp2v"]
+[ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="3_ndfis"]
+
 [node name="Win Page" type="Control" unique_id=1154059644]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +11,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_g818r")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1186782919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_awp2v")
+
+[node name="Label" type="Label" parent="." unique_id=1512641697]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -8.5
+offset_right = 42.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Win!!!"
+
+[node name="Button" parent="." unique_id=1142624175 instance=ExtResource("3_ndfis")]
+layout_mode = 1
+offset_top = 138.0
+offset_bottom = 163.0
+text = "Play Again?"
+
+[node name="Button2" parent="." unique_id=2100627890 instance=ExtResource("3_ndfis")]
+layout_mode = 1
+offset_top = 186.0
+offset_bottom = 211.0
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

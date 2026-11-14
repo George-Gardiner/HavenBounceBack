@@ -92,6 +92,12 @@ position = Vector2(337, -418)
 [node name="Box" parent="Front" unique_id=1860058456 instance=ExtResource("9_5rr72")]
 position = Vector2(849, -485)
 
+[node name="BouncyBlock3" parent="Front" unique_id=2080907022 instance=ExtResource("3_hn12h")]
+position = Vector2(-200, -467)
+
+[node name="BouncyBlock4" parent="Front" unique_id=1262559221 instance=ExtResource("3_hn12h")]
+position = Vector2(-877, -493)
+
 [node name="Blocks" type="Sprite2D" parent="." unique_id=1101605408]
 position = Vector2(886, 214)
 scale = Vector2(8.453125, 7.203125)
