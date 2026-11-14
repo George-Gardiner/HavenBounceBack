@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cn1vk2bpqjajd" path="res://player.tscn" id="1_3hls8"]
 [ext_resource type="Texture2D" uid="uid://wafufsn5kn1j" path="res://icon.svg" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://bfuf5l7g5eioj" path="res://bouncy_block.tscn" id="3_hn12h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_128xk"]
 
@@ -18,3 +19,6 @@ shape = SubResource("WorldBoundaryShape2D_128xk")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=909199806]
 position = Vector2(127, -96)
 texture = ExtResource("2_hbghi")
+
+[node name="BouncyBlock" parent="." unique_id=240428882 instance=ExtResource("3_hn12h")]
+position = Vector2(35, 25)

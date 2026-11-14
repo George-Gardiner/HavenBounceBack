@@ -27,5 +27,12 @@ func _physics_process(delta: float) -> void:
 		energy -= 10.0*delta
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
+	var collision = move_and_collide(velocity*delta, true)
+	if collision:
+		var collider = collision.get_collider()
+		if (collider.has_meta("Bouncy") and collider.get_meta("Bouncy")):
+			velocity.y *= -1
+	
+	
 	move_and_slide()
