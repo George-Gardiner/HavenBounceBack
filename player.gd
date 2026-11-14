@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		var collider = collision.get_collider()
 		if (collider.has_meta("Bouncy") and collider.get_meta("Bouncy")):
-			velocity.y *= -1
+			velocity.y *= -.9
 	
 	
 	move_and_slide()
