@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BounceBack"
-run/main_scene="uid://dxaf422ll0qse"
+run/main_scene="uid://d2sn322yigdtv"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

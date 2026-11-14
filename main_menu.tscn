@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2sn322yigdtv"]
 
 [ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://ovwru6spr3jf" path="res://main_menu.gd" id="1_7vrkn"]
 
 [node name="Main Menu" type="Control" unique_id=1800396855]
 layout_mode = 3
@@ -9,11 +10,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7vrkn")
 
-[node name="Button" parent="." unique_id=1142624175 instance=ExtResource("1_06t4h")]
+[node name="Start" parent="." unique_id=1142624175 instance=ExtResource("1_06t4h")]
 layout_mode = 1
+text = "Start"
 
 [node name="Button2" parent="." unique_id=1215733173 instance=ExtResource("1_06t4h")]
 layout_mode = 1
 offset_top = 26.0
 offset_bottom = 57.0
+
+[connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
