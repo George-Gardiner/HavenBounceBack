@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3j4fvkd0oasy"]
 
 [ext_resource type="Script" uid="uid://dgm3kdmr0f5a1" path="res://death_screen.gd" id="1_6bi5g"]
-[ext_resource type="Texture2D" uid="uid://dsmg5n86alif1" path="res://misc assets/title screen.png" id="1_if853"]
+[ext_resource type="Texture2D" uid="uid://bv3n40om3yiby" path="res://misc assets/UDead.png" id="2_6bi5g"]
 [ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="3_y0ggs"]
 
 [node name="Death screen" type="Control" unique_id=779553536]
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_if853")
+texture = ExtResource("2_6bi5g")
 
 [node name="Button" parent="." unique_id=1142624175 instance=ExtResource("3_y0ggs")]
 layout_mode = 1
