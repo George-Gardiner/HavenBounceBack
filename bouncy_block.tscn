@@ -11,6 +11,6 @@ metadata/Bouncy = true
 shape = SubResource("RectangleShape2D_128xk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=963586191]
-position = Vector2(0, 9.536743e-07)
-scale = Vector2(0.15625, 0.15625001)
+position = Vector2(49, -58)
+scale = Vector2(0.92187494, 1.0625)
 texture = ExtResource("2_kbnsy")

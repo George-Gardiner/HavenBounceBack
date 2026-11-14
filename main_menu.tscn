@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://ovwru6spr3jf" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://dsmg5n86alif1" path="res://title screen.png" id="2_fu7sn"]
 
 [node name="Main Menu" type="Control" unique_id=1800396855]
 layout_mode = 3
@@ -12,13 +13,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7vrkn")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=249211791]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fu7sn")
+
 [node name="Start" parent="." unique_id=1142624175 instance=ExtResource("1_06t4h")]
 layout_mode = 1
+offset_top = -54.0
+offset_bottom = -23.0
 text = "Start"
 
-[node name="Button2" parent="." unique_id=1215733173 instance=ExtResource("1_06t4h")]
+[node name="Options" parent="." unique_id=1284960507 instance=ExtResource("1_06t4h")]
+layout_mode = 0
+anchors_preset = 0
+offset_top = -15.5
+offset_bottom = 15.5
+text = "Options"
+
+[node name="Credits" parent="." unique_id=1215733173 instance=ExtResource("1_06t4h")]
 layout_mode = 1
 offset_top = 26.0
 offset_bottom = 57.0
+text = "Credits"
 
 [connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
