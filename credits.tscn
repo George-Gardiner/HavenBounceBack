@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://doo1opf7teqi1"]
+
+[ext_resource type="Script" uid="uid://dlfgri4fmckr" path="res://credits.gd" id="1_c1t8d"]
+[ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="1_nm7lk"]
+
+[node name="Credits" type="Control" unique_id=1200469179]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1t8d")
+
+[node name="Button" parent="." unique_id=1142624175 instance=ExtResource("1_nm7lk")]
+layout_mode = 1
+offset_top = 225.305
+offset_bottom = 250.30518
+text = "Return"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=267959969]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 76.0
+grow_horizontal = 2
+text = "Made by George Ayla and Lucas
+Fonts from here:
+https://www.1001fonts.com/cyberform-demo-font.html#license
+https://www.dafont.com/theme.php?cat=110 "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

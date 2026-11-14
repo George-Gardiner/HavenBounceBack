@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b82r2syxcsnlb"]
+
+[ext_resource type="FontFile" uid="uid://cme8k8uds8e15" path="res://Sectar.otf" id="1_2xaj3"]
+[ext_resource type="Script" uid="uid://dlljlo8b7ve6f" path="res://quit.gd" id="1_43e7m"]
+[ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="3_vco7o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n0wq6"]
+font = ExtResource("1_2xaj3")
+font_size = 800
+
+[node name="Quit" type="Control" unique_id=666693136]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_43e7m")
+
+[node name="Label" type="Label" parent="." unique_id=77568636]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -179.0
+offset_right = 1144.0
+offset_bottom = 862.0
+text = "NO"
+label_settings = SubResource("LabelSettings_n0wq6")
+
+[node name="Button" parent="." unique_id=1142624175 instance=ExtResource("3_vco7o")]
+layout_mode = 1
+offset_top = 278.0
+offset_bottom = 303.0
+text = "Play Game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

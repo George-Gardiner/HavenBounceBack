@@ -9,9 +9,11 @@ const JUMP_VELOCITY = -800.0
 var energy: float = 100.0
 var dir = directions.Left
 var state = states.Idle
+var key
 
 func _ready() -> void:
-	pass
+	key = $leftKey/AnimatedSprite2D2
+	key.play()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -59,18 +61,27 @@ func _physics_process(delta: float) -> void:
 			
 		if dir == directions.Right:
 			$AnimatedSprite2D.flip_h = true
+			key.flip_h = false
+			key.reparent($rightKey)
+			key.position = Vector2.ZERO
 		else:
 			$AnimatedSprite2D.flip_h = false
-		
-		match state:
-			states.Walking:
-				$AnimatedSprite2D.animation = "Walk"
-			states.Idle:
-				$AnimatedSprite2D.animation = "Idle"
-			states.Jumping:
-				$AnimatedSprite2D.animation = "Jump"
-			states.Falling:
-				$AnimatedSprite2D.animation = "Jump"
+			key.flip_h = true
+			key.reparent($leftKey)
+			key.position = Vector2.ZERO
 	else:
 		velocity.x = move_toward(velocity.x, 0, delta)
+		key.stop()
+		state = states.Idle
+	
+	match state:
+		states.Walking:
+			$AnimatedSprite2D.animation = "Walk"
+		states.Idle:
+			$AnimatedSprite2D.animation = "Idle"
+		states.Jumping:
+			$AnimatedSprite2D.animation = "Jump"
+		states.Falling:
+			$AnimatedSprite2D.animation = "Jump"
+		
 	move_and_slide()

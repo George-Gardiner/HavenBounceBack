@@ -28,16 +28,18 @@ offset_top = -54.0
 offset_bottom = -23.0
 text = "Start"
 
-[node name="Options" parent="." unique_id=1284960507 instance=ExtResource("1_06t4h")]
+[node name="Credits" parent="." unique_id=1284960507 instance=ExtResource("1_06t4h")]
 layout_mode = 1
 offset_top = -15.5
 offset_bottom = 15.5
-text = "Options"
+text = "Credits"
 
-[node name="Credits" parent="." unique_id=1215733173 instance=ExtResource("1_06t4h")]
+[node name="Quit" parent="." unique_id=1215733173 instance=ExtResource("1_06t4h")]
 layout_mode = 1
 offset_top = 26.0
 offset_bottom = 57.0
-text = "Credits"
+text = "Quit"
 
 [connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -9,6 +9,10 @@
 [ext_resource type="Script" uid="uid://bcbpm7jbh0f5c" path="res://animated_sprite_2d.gd" id="4_sweqy"]
 [ext_resource type="AudioStream" uid="uid://cwlojcpmu3ce5" path="res://misc assets/click.wav" id="8_dw050"]
 [ext_resource type="Script" uid="uid://7mgia1yo7c41" path="res://audio_stream_player_2d.gd" id="9_b26j0"]
+[ext_resource type="Texture2D" uid="uid://sp3sk61iwdut" path="res://misc assets/keys/key_1.png" id="10_urp6f"]
+[ext_resource type="Texture2D" uid="uid://fhpxstor26y" path="res://misc assets/keys/key_2.png" id="11_bwjto"]
+[ext_resource type="Texture2D" uid="uid://c5ehex76b6de4" path="res://misc assets/keys/key_3.png" id="12_606se"]
+[ext_resource type="Texture2D" uid="uid://brgmrlnbvmjjg" path="res://misc assets/keys/key_4.png" id="13_u1c27"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sh265"]
 radius = 46.0
@@ -44,6 +48,32 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_128xk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bwjto")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
 [node name="Player" type="CharacterBody2D" unique_id=355519921 groups=["Player"]]
 script = ExtResource("1_4flbx")
 
@@ -65,3 +95,15 @@ script = ExtResource("4_sweqy")
 stream = ExtResource("8_dw050")
 attenuation = 28.839985
 script = ExtResource("9_b26j0")
+
+[node name="leftKey" type="Node2D" parent="." unique_id=1731056468]
+position = Vector2(42.92, 14.42)
+scale = Vector2(0.23158914, 0.25194758)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="leftKey" unique_id=1884268593]
+sprite_frames = SubResource("SpriteFrames_128xk")
+frame_progress = 0.020283422
+
+[node name="rightKey" type="Node2D" parent="." unique_id=9228270]
+position = Vector2(-42.92, 14.2)
+scale = Vector2(0.23158914, 0.25194758)
