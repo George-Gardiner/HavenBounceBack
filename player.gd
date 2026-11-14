@@ -62,4 +62,8 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.animation = "Walk"
 		states.Idle:
 			$AnimatedSprite2D.animation = "Idle"
+		states.Jumping:
+			$AnimatedSprite2D.animation = "Jump"
+		states.Falling:
+			$AnimatedSprite2D.animation = "Jump"
 	move_and_slide()
