@@ -1,38 +1,46 @@
 [gd_scene format=3 uid="uid://dxaf422ll0qse"]
 
 [ext_resource type="PackedScene" uid="uid://cn1vk2bpqjajd" path="res://player.tscn" id="1_3hls8"]
-[ext_resource type="Texture2D" uid="uid://bn3fvkmtw4vte" path="res://background.png" id="1_ihfcg"]
-[ext_resource type="Texture2D" uid="uid://wafufsn5kn1j" path="res://icon.svg" id="2_hbghi"]
+[ext_resource type="Texture2D" uid="uid://bn3fvkmtw4vte" path="res://misc assets/background.png" id="1_ihfcg"]
+[ext_resource type="Texture2D" uid="uid://idifm7gntf0" path="res://misc assets/ball.png" id="2_rka8t"]
 [ext_resource type="PackedScene" uid="uid://bfuf5l7g5eioj" path="res://bouncy_block.tscn" id="3_hn12h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_128xk"]
+distance = 83.0
 
 [node name="Level1" type="Node2D" unique_id=448889599]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1258660752]
+[node name="Background" type="Parallax2D" parent="." unique_id=1209580889]
+scroll_scale = Vector2(0.5, 0.5)
 
-[node name="Background" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1572892101]
-motion_scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Background" unique_id=1933101311]
-position = Vector2(-99.99999, -1159)
-scale = Vector2(5, 5)
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1933101311]
+position = Vector2(-72, -603)
+scale = Vector2(4.1605268, 3.8096588)
 texture = ExtResource("1_ihfcg")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=800543153]
+[node name="Toys" type="Parallax2D" parent="." unique_id=351511555]
+scroll_scale = Vector2(0.7, 0.7)
 
-[node name="Player" parent="ParallaxBackground/ParallaxLayer" unique_id=355519921 instance=ExtResource("1_3hls8")]
-position = Vector2(-149, -105)
+[node name="Ball2" type="Sprite2D" parent="Toys" unique_id=1086394044]
+position = Vector2(539, -37)
+scale = Vector2(9.4921875, 9.007813)
+texture = ExtResource("2_rka8t")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground/ParallaxLayer" unique_id=912920655]
+[node name="Ball" type="Sprite2D" parent="Toys" unique_id=897973137]
+position = Vector2(-1486, 45.999985)
+scale = Vector2(5.7421856, 5.703125)
+texture = ExtResource("2_rka8t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/ParallaxLayer/StaticBody2D" unique_id=2084805993]
-position = Vector2(0, 37)
+[node name="Front" type="Parallax2D" parent="." unique_id=352448541]
+
+[node name="Player" parent="Front" unique_id=355519921 instance=ExtResource("1_3hls8")]
+position = Vector2(-93, -123)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Front" unique_id=912920655]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front/StaticBody2D" unique_id=2084805993]
+position = Vector2(-17, 107)
 shape = SubResource("WorldBoundaryShape2D_128xk")
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=909199806]
-position = Vector2(127, -96)
-texture = ExtResource("2_hbghi")
-
-[node name="BouncyBlock" parent="ParallaxBackground/ParallaxLayer" unique_id=240428882 instance=ExtResource("3_hn12h")]
-position = Vector2(35, 25)
+[node name="BouncyBlock" parent="Front" unique_id=240428882 instance=ExtResource("3_hn12h")]
+position = Vector2(45, 85)

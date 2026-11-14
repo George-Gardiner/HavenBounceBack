@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d3j4fvkd0oasy"]
+
+[ext_resource type="Texture2D" uid="uid://dsmg5n86alif1" path="res://misc assets/title screen.png" id="1_if853"]
+
+[node name="Death screen" type="Control" unique_id=779553536]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1137622534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_if853")
+
+[node name="Label" type="Label" parent="." unique_id=1298001009]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "YOU DIED"

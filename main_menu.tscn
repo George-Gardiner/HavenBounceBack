@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://ovwru6spr3jf" path="res://main_menu.gd" id="1_7vrkn"]
-[ext_resource type="Texture2D" uid="uid://dsmg5n86alif1" path="res://title screen.png" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dsmg5n86alif1" path="res://misc assets/title screen.png" id="2_fu7sn"]
 
 [node name="Main Menu" type="Control" unique_id=1800396855]
 layout_mode = 3
@@ -29,8 +29,7 @@ offset_bottom = -23.0
 text = "Start"
 
 [node name="Options" parent="." unique_id=1284960507 instance=ExtResource("1_06t4h")]
-layout_mode = 0
-anchors_preset = 0
+layout_mode = 1
 offset_top = -15.5
 offset_bottom = 15.5
 text = "Options"

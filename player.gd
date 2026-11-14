@@ -3,8 +3,8 @@ extends CharacterBody2D
 enum directions {Right, Left}
 enum states {Jumping, Falling, Walking, Idle}
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 600.0
+const JUMP_VELOCITY = -800.0
 
 var energy: float = 100.0
 var dir = directions.Left
