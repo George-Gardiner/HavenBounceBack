@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cy4tdg2rr15ru"]
+
+[ext_resource type="Script" uid="uid://dq8x1ogkp4s7t" path="res://child.gd" id="1_vgl3u"]
+[ext_resource type="Texture2D" uid="uid://ctap0n5ho57y1" path="res://Sonion/SonionRingBackTurned.png" id="2_d04bu"]
+[ext_resource type="Texture2D" uid="uid://fhgchjit85wb" path="res://Sonion/BrightRed.png" id="3_s1eon"]
+[ext_resource type="Texture2D" uid="uid://yoby51s444tj" path="res://Sonion/blankAhh.png" id="4_a5va7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d04bu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_s1eon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a5va7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.5
+}]
+
+[node name="Child" type="Node2D" unique_id=859269407 groups=["Child"]]
+script = ExtResource("1_vgl3u")
+
+[node name="Child" type="Sprite2D" parent="." unique_id=260379563]
+position = Vector2(1046, 419)
+scale = Vector2(1.6875, 1.8691409)
+texture = ExtResource("2_d04bu")
+
+[node name="Warning" type="AnimatedSprite2D" parent="." unique_id=954161688]
+position = Vector2(883.00006, 565)
+scale = Vector2(0.88867223, 0.6552739)
+sprite_frames = SubResource("SpriteFrames_d04bu")
+frame_progress = 0.68942934

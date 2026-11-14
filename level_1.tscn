@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://br7lpoyi3hlye" path="res://misc assets/BLoxz.png" id="4_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://cyetvpi0roao8" path="res://shelf.tscn" id="8_bjebc"]
 [ext_resource type="PackedScene" uid="uid://bqpsl4oxswlbi" path="res://box.tscn" id="9_5rr72"]
+[ext_resource type="PackedScene" uid="uid://d8d68tr4t6lk" path="res://bon_bon.tscn" id="10_gyffv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_128xk"]
 distance = 83.0
@@ -19,7 +20,7 @@ distance = -1043.9918
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lgk4"]
 normal = Vector2(0.9999604, -0.008894185)
-distance = -1119.7296
+distance = -1187.0421
 
 [node name="Level1" type="Node2D" unique_id=448889599]
 
@@ -97,6 +98,9 @@ position = Vector2(-200, -467)
 
 [node name="BouncyBlock4" parent="Front" unique_id=1262559221 instance=ExtResource("3_hn12h")]
 position = Vector2(-877, -493)
+
+[node name="BonBon" parent="Front" unique_id=1073158318 instance=ExtResource("10_gyffv")]
+position = Vector2(-361, -23)
 
 [node name="Blocks" type="Sprite2D" parent="." unique_id=1101605408]
 position = Vector2(886, 214)

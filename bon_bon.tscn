@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d8d68tr4t6lk"]
+
+[ext_resource type="Script" uid="uid://dy5tley65cumi" path="res://toy.gd" id="1_sxg0v"]
+[ext_resource type="Texture2D" uid="uid://cwr7qbtn0fj5q" path="res://misc assets/BonBon.png" id="2_45qha"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_128xk"]
+radius = 35.0
+height = 114.0
+
+[node name="BonBon" type="Area2D" unique_id=1073158318]
+script = ExtResource("1_sxg0v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=804452674]
+position = Vector2(16.000004, 21)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("2_45qha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1786393152]
+position = Vector2(10, 30)
+shape = SubResource("CapsuleShape2D_128xk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

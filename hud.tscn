@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqh0tx0phrauv"]
 
 [ext_resource type="Script" uid="uid://ddig2gh2kex4c" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="PackedScene" uid="uid://cy4tdg2rr15ru" path="res://child.tscn" id="2_64ctp"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1911882680]
 script = ExtResource("1_37p78")
@@ -9,3 +10,6 @@ script = ExtResource("1_37p78")
 offset_right = 100.0
 offset_bottom = 27.0
 show_percentage = false
+
+[node name="Child" parent="." unique_id=859269407 instance=ExtResource("2_64ctp")]
+position = Vector2(23, -9)

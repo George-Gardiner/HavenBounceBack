@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://d3j4fvkd0oasy"]
 
+[ext_resource type="Script" uid="uid://dgm3kdmr0f5a1" path="res://death_screen.gd" id="1_6bi5g"]
 [ext_resource type="Texture2D" uid="uid://dsmg5n86alif1" path="res://misc assets/title screen.png" id="1_if853"]
+[ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="3_y0ggs"]
 
 [node name="Death screen" type="Control" unique_id=779553536]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6bi5g")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1137622534]
 layout_mode = 1
@@ -19,10 +22,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_if853")
 
-[node name="Label" type="Label" parent="." unique_id=1298001009]
+[node name="Button" parent="." unique_id=1142624175 instance=ExtResource("3_y0ggs")]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "YOU DIED"
+offset_top = 220.0
+offset_bottom = 245.0
+text = "Retry"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -30,6 +30,8 @@ func _physics_process(delta: float) -> void:
 		if direction and energy > 0:
 			velocity.x = direction * SPEED
 			energy -= 10.0*delta
+			if (get_tree().get_first_node_in_group("Child").triggered):
+				get_tree().change_scene_to_file("res://death_screen.tscn")
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
