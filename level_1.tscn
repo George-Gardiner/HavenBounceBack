@@ -56,7 +56,7 @@ position = Vector2(-17, 107)
 shape = SubResource("WorldBoundaryShape2D_128xk")
 
 [node name="BouncyBlock" parent="Front" unique_id=240428882 instance=ExtResource("3_hn12h")]
-position = Vector2(45, 85)
+position = Vector2(24, 19)
 
 [node name="Blocks" type="Sprite2D" parent="." unique_id=1101605408]
 position = Vector2(1169, 171)
