@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dgm3kdmr0f5a1" path="res://death_screen.gd" id="1_6bi5g"]
 [ext_resource type="Texture2D" uid="uid://bv3n40om3yiby" path="res://misc assets/UDead.png" id="2_6bi5g"]
 [ext_resource type="PackedScene" uid="uid://cbrefe0tmrksb" path="res://button.tscn" id="3_y0ggs"]
+[ext_resource type="AudioStream" uid="uid://ciunsd7768mtd" path="res://Untitled.wav" id="4_hhlqb"]
+[ext_resource type="Script" uid="uid://dibsxxfp4x7h6" path="res://asdf.gd" id="5_hhlqb"]
 
 [node name="Death screen" type="Control" unique_id=779553536]
 layout_mode = 3
@@ -27,5 +29,9 @@ layout_mode = 1
 offset_top = 220.0
 offset_bottom = 245.0
 text = "Retry"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=306765802]
+stream = ExtResource("4_hhlqb")
+script = ExtResource("5_hhlqb")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

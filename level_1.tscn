@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dxaf422ll0qse"]
 
+[ext_resource type="Script" uid="uid://0vma4s6wxmpf" path="res://level_1.gd" id="1_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://cn1vk2bpqjajd" path="res://player.tscn" id="1_3hls8"]
 [ext_resource type="Texture2D" uid="uid://dawtrxsexy8um" path="res://misc assets/NewPixels (1).png" id="1_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://bmwxpu8l8yk40" path="res://misc assets/Blocks.png" id="2_5hph3"]
@@ -23,6 +24,7 @@ normal = Vector2(0.9999604, -0.008894185)
 distance = -1205.0947
 
 [node name="Level1" type="Node2D" unique_id=448889599]
+script = ExtResource("1_1pe0h")
 
 [node name="Background" type="Parallax2D" parent="." unique_id=1209580889]
 scroll_scale = Vector2(0.5, 1)

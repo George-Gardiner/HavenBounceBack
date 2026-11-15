@@ -6,8 +6,9 @@ func _ready() -> void:
 	click()
 
 func click():
-	playing=true
-	get_tree().create_timer(.5).timeout.connect(click)
+	play()
+	if $"..".energy>0:
+		get_tree().create_timer(.5).timeout.connect(click)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

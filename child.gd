@@ -4,7 +4,7 @@ const turned = preload("res://Sonion/SonionRingBackTurned.png")
 const watching = preload("res://Sonion/SonionRingFaceTurned.png")
 const warning = preload("res://Sonion/SonionRingWarning.png")
 
-var timer: float = randf_range(3, 8)
+var timer: float = randf_range(2, 5)
 var triggered = false
 
 # Called when the node enters the scene tree for the first time.
